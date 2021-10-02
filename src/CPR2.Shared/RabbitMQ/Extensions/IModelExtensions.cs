@@ -9,7 +9,8 @@ public static class IModelExtensions
         amqpChannel.ExchangeDeclare(rabbitMQPublisherOptionsBase.ExchangeName, rabbitMQPublisherOptionsBase.ExchangeType, true, false);
 
         Dictionary<string, object> queueArguments = new();
-        queueArguments.Add(Headers.XQueueType, "quorum");
+        queueArguments.Add("x-queue-type", "quorum");
+
         foreach (var provider in Providers)
         {
             string providerQueueName = string.Format(provider.Value, rabbitMQPublisherOptionsBase.QueueName);
