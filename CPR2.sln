@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31717.71
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{BC84D409-5A0A-4D8D-B3F5-5E86A92F4BFC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{DB76660D-2979-444E-9551-C873AF4FF18A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CPR2.Data.Redis", "src\CPR2.Data.Redis\CPR2.Data.Redis.csproj", "{27BCFECF-AD46-4E60-ABD9-BE04AF4C2CE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CPR2.Data.SqlServer", "src\CPR2.Data.SqlServer\CPR2.Data.SqlServer.csproj", "{6C8ED7C6-9621-428D-8F17-6156D49AC5E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CPR2.Api", "src\CPR2.Api\CPR2.Api.csproj", "{DE916834-D964-4650-BA94-0F243487CB96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CPR2.Providers.IranAirtour", "src\CPR2.Providers.IranAirtour\CPR2.Providers.IranAirtour.csproj", "{1BE7D4C6-8865-46D3-B735-BB48C3153C57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IranAirtour", "src\IranAirtour\IranAirtour.csproj", "{024B7851-07AC-46F0-97FC-E7580F601C3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CPR2.Shared", "src\CPR2.Shared\CPR2.Shared.csproj", "{7CBD431A-C2DA-4053-AB3C-1D2BC75F6E55}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{27BCFECF-AD46-4E60-ABD9-BE04AF4C2CE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27BCFECF-AD46-4E60-ABD9-BE04AF4C2CE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27BCFECF-AD46-4E60-ABD9-BE04AF4C2CE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27BCFECF-AD46-4E60-ABD9-BE04AF4C2CE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C8ED7C6-9621-428D-8F17-6156D49AC5E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C8ED7C6-9621-428D-8F17-6156D49AC5E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C8ED7C6-9621-428D-8F17-6156D49AC5E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C8ED7C6-9621-428D-8F17-6156D49AC5E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE916834-D964-4650-BA94-0F243487CB96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE916834-D964-4650-BA94-0F243487CB96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE916834-D964-4650-BA94-0F243487CB96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE916834-D964-4650-BA94-0F243487CB96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BE7D4C6-8865-46D3-B735-BB48C3153C57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BE7D4C6-8865-46D3-B735-BB48C3153C57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BE7D4C6-8865-46D3-B735-BB48C3153C57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BE7D4C6-8865-46D3-B735-BB48C3153C57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{024B7851-07AC-46F0-97FC-E7580F601C3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{024B7851-07AC-46F0-97FC-E7580F601C3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{024B7851-07AC-46F0-97FC-E7580F601C3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{024B7851-07AC-46F0-97FC-E7580F601C3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CBD431A-C2DA-4053-AB3C-1D2BC75F6E55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CBD431A-C2DA-4053-AB3C-1D2BC75F6E55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CBD431A-C2DA-4053-AB3C-1D2BC75F6E55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CBD431A-C2DA-4053-AB3C-1D2BC75F6E55}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{27BCFECF-AD46-4E60-ABD9-BE04AF4C2CE0} = {BC84D409-5A0A-4D8D-B3F5-5E86A92F4BFC}
+		{6C8ED7C6-9621-428D-8F17-6156D49AC5E6} = {BC84D409-5A0A-4D8D-B3F5-5E86A92F4BFC}
+		{DE916834-D964-4650-BA94-0F243487CB96} = {BC84D409-5A0A-4D8D-B3F5-5E86A92F4BFC}
+		{1BE7D4C6-8865-46D3-B735-BB48C3153C57} = {BC84D409-5A0A-4D8D-B3F5-5E86A92F4BFC}
+		{024B7851-07AC-46F0-97FC-E7580F601C3A} = {BC84D409-5A0A-4D8D-B3F5-5E86A92F4BFC}
+		{7CBD431A-C2DA-4053-AB3C-1D2BC75F6E55} = {BC84D409-5A0A-4D8D-B3F5-5E86A92F4BFC}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CFBC9967-F930-4343-84BD-C07062809EB1}
+	EndGlobalSection
+EndGlobal

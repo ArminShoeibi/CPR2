@@ -1,0 +1,11 @@
+﻿{
+  "profiles": {
+    "CPR2.Providers.IranAirtour": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

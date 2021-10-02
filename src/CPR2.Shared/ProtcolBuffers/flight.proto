@@ -1,0 +1,9 @@
+syntax = "proto3";
+import "google/protobuf/timestamp.proto";
+option csharp_namespace = "CPR2.ProtocolBuffers";
+
+message AvailableFlightsRequestProto {
+	string destination = 1;
+	string origin = 2;
+	google.protobuf.Timestamp departureDate = 3;
+}

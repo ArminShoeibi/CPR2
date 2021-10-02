@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CPR2.Data.Redis\CPR2.Data.Redis.csproj" />
+    <ProjectReference Include="..\CPR2.Data.SqlServer\CPR2.Data.SqlServer.csproj" />
+  </ItemGroup>
+
+</Project>
