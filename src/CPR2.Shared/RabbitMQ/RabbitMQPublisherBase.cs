@@ -4,7 +4,7 @@ using RabbitMQ.Client;
 
 namespace CPR2.Shared.RabbitMQ;
 
-public abstract class RabbitMQPublisherBase<T>
+public abstract class RabbitMQPublisherBase<T,TMessage>
 {
     protected readonly ILogger<T> _logger;
     protected readonly IConnection _amqpConnection;
@@ -13,11 +13,13 @@ public abstract class RabbitMQPublisherBase<T>
     public RabbitMQPublisherBase(ILogger<T> logger,
                                  IConnection amqpConnection,
                                  IOptionsMonitor<RabbitMQPublisherOptions> rabbitMQPublisherOptions,
-                                 string optionName)
+                                 string optionsName)
     {
         _logger = logger;
         _amqpConnection = amqpConnection;
         _amqpChannel = _amqpConnection.CreateModel();
-        _rabbitMQPublisherOptions = rabbitMQPublisherOptions.Get(optionName);
+        _rabbitMQPublisherOptions = rabbitMQPublisherOptions.Get(optionsName);
     }
+
+    public abstract void Publish(TMessage message);
 }

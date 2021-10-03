@@ -1,5 +1,6 @@
 ﻿using CPR2.Api.RabbitMQPublishers;
 using CPR2.Shared.DTOs;
+using Google.Protobuf.WellKnownTypes;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CPR2.Api.Controllers;
@@ -19,7 +20,13 @@ public class AvailableFlightsController : ControllerBase
     [HttpGet]
     public IActionResult GetAvailableFlights([FromQuery] AvailableFlightsRequestDto availableFlightsRequestDto)
     {
-        _availableFlightsRequestPublisher.PublishAvailableFlightsRequest(availableFlightsRequestDto);
+        
+        _availableFlightsRequestPublisher.Publish(new() 
+        {
+            DepartureDate = availableFlightsRequestDto.DepartureDate.ToTimestamp(),
+            Destination = availableFlightsRequestDto.Destination,
+            Origin = availableFlightsRequestDto.Origin
+        });
         return Ok();
     }
 }

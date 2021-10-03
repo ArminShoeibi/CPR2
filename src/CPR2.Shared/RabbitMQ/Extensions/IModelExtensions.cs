@@ -9,7 +9,8 @@ public static class IModelExtensions
         amqpChannel.ExchangeDeclare(rabbitMQPublisherOptionsBase.ExchangeName, rabbitMQPublisherOptionsBase.ExchangeType, true, false);
 
         Dictionary<string, object> queueArguments = new();
-        queueArguments.Add("x-queue-type", "quorum");
+        //queueArguments.Add("x-queue-type", "quorum");
+        queueArguments.Add(Headers.XQueueType, "quorum");
 
         foreach (var provider in Providers)
         {
@@ -26,20 +27,20 @@ public static class IModelExtensions
 
     public static readonly Dictionary<string, string> Providers = new()
     {
-        { "IranAir", "IranAir{0}" },
+        //{ "IranAir", "IranAir{0}" },
         { "IranAirtour", "IranAirtour{0}" },
-        { "Mahan", "Mahan{0}" },
-        { "Varesh", "Varesh{0}" },
-        { "Aseman", "Aseman{0}" },
-        { "Ata", "Ata{0}" },
-        { "Caspian", "Caspian{0}" },
-        { "Karun", "Karun{0}" },
-        { "KishAir", "KishAir{0}" },
-        { "Meraj", "Meraj{0}" },
-        { "Sepehran", "Sepehran{0}" },
-        { "Saha", "Saha{0}" },
-        { "QeshmAir", "QeshmAir{0}" },
-        { "Zagros", "Zagros{0}" },
-        { "ParsAir", "ParsAir{0}" },
+        //{ "Mahan", "Mahan{0}" },
+        //{ "Varesh", "Varesh{0}" },
+        //{ "Aseman", "Aseman{0}" },
+        //{ "Ata", "Ata{0}" },
+        //{ "Caspian", "Caspian{0}" },
+        //{ "Karun", "Karun{0}" },
+        //{ "KishAir", "KishAir{0}" },
+        //{ "Meraj", "Meraj{0}" },
+        //{ "Sepehran", "Sepehran{0}" },
+        //{ "Saha", "Saha{0}" },
+        //{ "QeshmAir", "QeshmAir{0}" },
+        //{ "Zagros", "Zagros{0}" },
+        //{ "ParsAir", "ParsAir{0}" },
     };
 }

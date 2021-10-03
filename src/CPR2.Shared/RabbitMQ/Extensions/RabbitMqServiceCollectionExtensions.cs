@@ -7,13 +7,15 @@ public static class RabbitMqServiceCollectionExtensions
     {
         ConnectionFactory amqpConnectionFactory = new()
         {
+            ConsumerDispatchConcurrency = 1,
             DispatchConsumersAsync = true,
             AutomaticRecoveryEnabled = true,
             TopologyRecoveryEnabled = true,
-            NetworkRecoveryInterval = TimeSpan.FromSeconds(10),
             Password = ConnectionFactory.DefaultPass,
             UserName = ConnectionFactory.DefaultUser,
             HostName = "localhost",
+            RequestedHeartbeat = TimeSpan.FromSeconds(40),
+            NetworkRecoveryInterval = TimeSpan.FromSeconds(10),
         };
         IConnection amqpConnection = amqpConnectionFactory.CreateConnection();
         return  services.AddSingleton(amqpConnection);
