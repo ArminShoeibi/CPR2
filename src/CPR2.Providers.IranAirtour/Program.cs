@@ -17,8 +17,8 @@ var rabbitMQConsumerOptions = host.Services.GetRequiredService<IOptionsMonitor<R
 IConnection amqpConnection = host.Services.GetRequiredService<IConnection>();
 
 
-amqpConnection.CreateChannelWithConsumer<AvailableFlightsRequestConsumer>(rabbitMQConsumerOptions, 
-                                                                          host.Services);
+amqpConnection.CreateChannelWithConsumer<AvailableFlightsRequestConsumer>(rabbitMQConsumerOptions, host.Services);
+
 
 
 
