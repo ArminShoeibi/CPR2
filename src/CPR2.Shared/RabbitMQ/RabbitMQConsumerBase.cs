@@ -1,11 +1,12 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Google.Protobuf;
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 
 namespace CPR2.Shared.RabbitMQ;
 
-public class RabbitMQConsumerBase<T> : AsyncEventingBasicConsumer
+public class RabbitMQConsumerBase<T, TMessage> : AsyncEventingBasicConsumer where TMessage : IMessage<TMessage>
 {
     protected readonly ILogger<T> _logger;
     protected readonly RabbitMQConsumerOptions rabbitMQConsumerOptions;
