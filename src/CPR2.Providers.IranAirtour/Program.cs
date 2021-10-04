@@ -1,3 +1,4 @@
+using CPR2.ProtocolBuffers;
 using CPR2.Providers.IranAirtour.RabbitMQConsumers;
 using CPR2.Shared.RabbitMQ;
 using CPR2.Shared.RabbitMQ.Extensions;
@@ -17,7 +18,7 @@ var rabbitMQConsumerOptions = host.Services.GetRequiredService<IOptionsMonitor<R
 IConnection amqpConnection = host.Services.GetRequiredService<IConnection>();
 
 
-amqpConnection.CreateChannelWithConsumer<AvailableFlightsRequestConsumer>(rabbitMQConsumerOptions, host.Services);
+amqpConnection.CreateChannelWithConsumer<AvailableFlightsRequestConsumer,AvailableFlightsRequestProto>(rabbitMQConsumerOptions, host.Services);
 
 
 

@@ -6,7 +6,7 @@ using RabbitMQ.Client.Events;
 
 namespace CPR2.Providers.IranAirtour.RabbitMQConsumers;
 
-public class AvailableFlightsRequestConsumer : RabbitMQConsumerBase<AvailableFlightsRequestConsumer>
+public class AvailableFlightsRequestConsumer : RabbitMQConsumerBase<AvailableFlightsRequestConsumer, AvailableFlightsRequestProto>
 {
     public AvailableFlightsRequestConsumer(IModel amqpChannel,
                                            IOptionsMonitor<RabbitMQConsumerOptions> rabbitMQConsumerOptionsMonitor,
