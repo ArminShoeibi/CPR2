@@ -1,10 +1,11 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Google.Protobuf;
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using RabbitMQ.Client;
 
 namespace CPR2.Shared.RabbitMQ;
 
-public abstract class RabbitMQPublisherBase<T, TMessage>
+public abstract class RabbitMQPublisherBase<T, TMessage> where TMessage : IMessage<TMessage>
 {
     protected readonly ILogger<T> _logger;
     protected readonly IConnection _amqpConnection;

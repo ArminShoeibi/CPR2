@@ -1,12 +1,9 @@
 ﻿using CPR.Shared.RabbitMQ.Extensions;
 using CPR2.ProtocolBuffers;
-using CPR2.Shared.DTOs;
 using CPR2.Shared.RabbitMQ;
 using Google.Protobuf;
-using Google.Protobuf.WellKnownTypes;
 using Microsoft.Extensions.Options;
 using RabbitMQ.Client;
-using RabbitMQ.Client.Exceptions;
 
 namespace CPR2.Api.RabbitMQPublishers;
 
