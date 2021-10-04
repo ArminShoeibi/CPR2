@@ -1,7 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using RabbitMQ.Client;
-using RabbitMQ.Client.Events;
 
 namespace CPR2.Shared.RabbitMQ.Extensions;
 
@@ -11,7 +10,7 @@ public static class IConnectionExtensions
                                                       IOptionsMonitor<RabbitMQConsumerOptions> rabbitMQConsumerOptionsMonitor,
                                                       IServiceProvider serviceProvider,
                                                       params object[] parameters)
-        where T : AsyncEventingBasicConsumer
+        where T : RabbitMQConsumerBase<T>
     {
         var rabbitMQConsumerOptions = rabbitMQConsumerOptionsMonitor.Get(typeof(T).Name);
         var amqpChannel = amqpConnection.CreateModel();

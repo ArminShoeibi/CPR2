@@ -4,4 +4,6 @@ public class RabbitMQConsumerOptions
 {
     public string QueueName { get; set; }
     public bool AutoAcknowledgment { get; set; }
+
+
 }
