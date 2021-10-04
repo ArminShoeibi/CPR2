@@ -7,8 +7,8 @@ namespace CPR2.Shared.RabbitMQ;
 
 public class RabbitMQConsumerBase<T> : AsyncEventingBasicConsumer
 {
-    private readonly ILogger<T> _logger;
-    private readonly RabbitMQConsumerOptions rabbitMQConsumerOptions;
+    protected readonly ILogger<T> _logger;
+    protected readonly RabbitMQConsumerOptions rabbitMQConsumerOptions;
     public RabbitMQConsumerBase(IModel amqpChannel,
                                 IOptionsMonitor<RabbitMQConsumerOptions> rabbitMQConsumerOptionsMonitor,
                                 ILogger<T> logger) : base(amqpChannel)
